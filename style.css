@@ -1,0 +1,69 @@
+﻿* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: navajowhite; /*Fondo de color para nuestra pagina*/
+    display: grid; /*Esto nos sirve para centrar en toda la pantalla*/
+    place-items: center; /*Esto nos sirve para centrar en toda la pantalla*/
+}
+
+.calculadora {
+    background-color: midnightblue; /*Fondo de nuestra calculadora color*/
+    color: whitesmoke; /*Es lo que va dentro de la calculadora el color*/
+    display: grid; /*Ajusta todos los elementos que tengo en una columna*/
+    grid-template-columns: repeat(4, 1fr); /*Nos ajusta los elementos en 4 columnas*/
+    width: 400px; /*Tamaño de la calculadora*/
+    max-width: 100%; /*Esto nos ayuda a ajustar la calculadora a ala pantalla si el ususari varia el tamaño de la pagina*/
+    padding: 2.0rem;
+    border-radius: 2.5rem; /*Ajusta los bordes ovalados*/
+    gap: 0.5rem; /*Separación de botones*/
+}
+
+.pantalla{
+    grid-column:1 / -1; /*Nos ayuda a que la pantalla donde vamos a introducir los numeros vaya desde la columna 1 hasta que termine*/
+    background-color:darkblue; /*Fondo de color del input*/
+    padding: 1.5rem; /*El ancho de la pantalla input*/
+    font-size: 2rem;
+    text-align: right; /*A que lado del input quiero que se muestre el texto*/
+    border-radius: 1rem; /*El borde de nuestra pantalla*/
+    font-family: monospace;
+    font-weight: 600;
+    overflow:hidden; /*No va permitir que se desborden los numeros de la caja de pantalla*/
+}
+
+.btn {
+    background-color: whitesmoke; /*Fondo de los botones*/
+    color: black; /*Color de lo que va dentro de los botones*/
+    border: 2rem;
+    padding: 1.5rem; /*Tamaño de los botones de nuestra calculadora*/
+    display: flex;
+    justify-content: center; /*Con esto podemos centrar lo que va en nuestros botones*/
+    align-items: center;
+    cursor: pointer; /*V aparecer el cursor cuando nos paremos encima de un boton*/
+}
+
+.btn:hover{ /*Este hover nos va a sombrear cuando nos paramos encima de un boton*/
+            background-color: darkslateblue;
+}
+
+#cero {
+    grid-column: 1 / 3; /*con column se expande a un lado*/
+}
+
+#igual {
+    grid-row: span 2; /*con span hacia abajo*/
+    background-color: #e6394a;
+}
+
+#igual:hover {     
+    background-color: #e65766;
+}
+
+.titulo{
+    color: coral;
+}
